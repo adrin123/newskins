@@ -2,7 +2,8 @@
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="theme-color" content="#0b0c10">
     <title>Newskins | Precision Steering Wheel & Gear Knob Upholstery — Aluva, Ernakulam</title>
     <meta name="description" content="Newskins in Muppathadam, Aluva, Ernakulam, Kerala specializes in hand-crafted OEM steering wheel restoration, luxury European leather wraps, sport custom stitching, and gear knob upholstery.">
     
@@ -50,6 +51,10 @@
     </script>
 
     <style>
+        * {
+            -webkit-tap-highlight-color: transparent;
+        }
+
         body {
             background-color: #0b0c10;
             color: #f3f4f6;
@@ -86,7 +91,16 @@
             background-repeat: repeat-x;
         }
 
-        /* Custom Scrollbar */
+        /* Hide horizontal scrollbar on filter pills while keeping scroll */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Custom Scrollbar for Desktop */
         ::-webkit-scrollbar {
             width: 8px;
             height: 8px;
@@ -102,14 +116,16 @@
             background: #e05a2b;
         }
 
-        /* Card Hover Effects */
+        /* Card Hover Effects (Desktop Only to avoid sticky touch states on phones) */
         .portfolio-card {
             transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease;
         }
-        .portfolio-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.75), 0 0 25px -5px rgba(224, 90, 43, 0.25);
-            border-color: rgba(224, 90, 43, 0.6);
+        @media (hover: hover) {
+            .portfolio-card:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.75), 0 0 25px -5px rgba(224, 90, 43, 0.25);
+                border-color: rgba(224, 90, 43, 0.6);
+            }
         }
 
         /* Lightbox Zoom transition */
@@ -122,35 +138,35 @@
         }
     </style>
 </head>
-<body class="bg-carbon-pattern font-sans antialiased selection:bg-copper-500 selection:text-white">
+<body class="bg-carbon-pattern font-sans antialiased selection:bg-copper-500 selection:text-white pb-20 sm:pb-0">
 
     <!-- Top Announcement Bar -->
-    <div class="bg-gradient-to-r from-carbon-950 via-carbon-800 to-carbon-950 border-b border-white/10 text-xs sm:text-sm py-2 px-4">
-        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
-            <div class="flex items-center gap-2 text-gray-300">
-                <span class="inline-flex items-center justify-center w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                <span><strong class="text-white">Newskins Upholstery Studio:</strong> Muppathadam, Aluva, Ernakulam District, Kerala</span>
+    <div class="bg-gradient-to-r from-carbon-950 via-carbon-800 to-carbon-950 border-b border-white/10 text-[11px] sm:text-sm py-2 px-3 sm:px-4">
+        <div class="max-w-7xl mx-auto flex items-center justify-between gap-2">
+            <div class="flex items-center gap-1.5 sm:gap-2 text-gray-300 truncate">
+                <span class="inline-flex items-center justify-center w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
+                <span class="truncate"><strong class="text-white">Newskins Studio:</strong> Muppathadam, Aluva, Ernakulam</span>
             </div>
-            <div class="flex items-center gap-4 ml-auto">
+            <div class="flex items-center gap-4 shrink-0">
                 <a href="#b2b" class="text-saddle-400 hover:text-white transition hidden md:inline-flex items-center gap-1.5 font-medium">
-                    <i class="fa-solid fa-handshake"></i> Workshop & Showroom B2B Rates Available
+                    <i class="fa-solid fa-handshake"></i> Workshop &amp; Showroom B2B Rates
                 </a>
-                <a href="https://wa.me/919388475951?text=Hi%20Newskins%2C%20I%20would%20like%20to%20enquire%20about%20steering%20wheel%20upholstery." target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:text-emerald-300 font-semibold flex items-center gap-1.5">
-                    <i class="fa-brands fa-whatsapp text-base"></i> +91 9388475951
+                <a href="https://wa.me/919388475951?text=Hi%20Newskins%2C%20I%20would%20like%20to%20enquire%20about%20steering%20wheel%20upholstery." target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:text-emerald-300 font-semibold flex items-center gap-1">
+                    <i class="fa-brands fa-whatsapp text-sm sm:text-base"></i>
+                    <span>+91 9388475951</span>
                 </a>
             </div>
         </div>
     </div>
 
     <!-- Sticky Navigation Bar -->
-    <header class="sticky top-0 z-40 bg-carbon-900/90 backdrop-blur-md border-b border-white/10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    <header class="sticky top-0 z-40 bg-carbon-900/95 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-2">
             <!-- Brand Logo -->
-            <a href="#" class="flex items-center gap-3 group">
-                <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-copper-500 to-amber-700 p-0.5 shadow-lg shadow-copper-500/20 group-hover:scale-105 transition">
+            <a href="#" class="flex items-center gap-2.5 sm:gap-3 group min-w-0">
+                <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-copper-500 to-amber-700 p-0.5 shadow-lg shadow-copper-500/20 group-hover:scale-105 transition shrink-0">
                     <div class="w-full h-full bg-carbon-900 rounded-[10px] flex items-center justify-center relative">
-                        <!-- Custom Steering Wheel + Needle SVG -->
-                        <svg class="w-7 h-7 text-copper-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <svg class="w-6 h-6 sm:w-7 sm:h-7 text-copper-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
                             <circle cx="12" cy="12" r="9" />
                             <circle cx="12" cy="12" r="2.5" />
                             <path d="M12 14.5V21" stroke-linecap="round" />
@@ -159,12 +175,12 @@
                         </svg>
                     </div>
                 </div>
-                <div>
-                    <div class="flex items-center gap-2">
-                        <span class="font-display font-extrabold text-2xl tracking-wider text-white">NEW<span class="text-copper-500">SKINS</span></span>
-                        <span class="text-[10px] uppercase tracking-widest bg-white/10 text-saddle-300 px-2 py-0.5 rounded-full font-semibold border border-white/10">Aluva</span>
+                <div class="truncate">
+                    <div class="flex items-center gap-1.5 sm:gap-2">
+                        <span class="font-display font-extrabold text-xl sm:text-2xl tracking-wider text-white">NEW<span class="text-copper-500">SKINS</span></span>
+                        <span class="text-[9px] sm:text-[10px] uppercase tracking-widest bg-white/10 text-saddle-300 px-1.5 sm:px-2 py-0.5 rounded-full font-semibold border border-white/10">Aluva</span>
                     </div>
-                    <p class="text-[11px] text-gray-400 tracking-wide">Precision Steering & Gear Upholstery</p>
+                    <p class="text-[10px] sm:text-[11px] text-gray-400 tracking-wide truncate">Precision Steering &amp; Gear Upholstery</p>
                 </div>
             </a>
 
@@ -178,138 +194,153 @@
             </nav>
 
             <!-- Action Buttons -->
-            <div class="flex items-center gap-2.5">
-                
-
-                <a href="https://wa.me/919388475951?text=Hi%20Newskins%20(Aluva)%2C%20I%20want%20to%20get%20a%20quote%20for%20steering%20wheel%20upholstery.%20Here%20is%20my%20car%20model%3A" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs sm:text-sm shadow-lg shadow-emerald-600/25 transition">
+            <div class="flex items-center gap-2 shrink-0">
+                <a href="https://wa.me/919388475951?text=Hi%20Newskins%20(Aluva)%2C%20I%20want%20to%20get%20a%20quote%20for%20steering%20wheel%20upholstery.%20Here%20is%20my%20car%20model%3A" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white font-semibold text-xs sm:text-sm shadow-lg shadow-emerald-600/25 transition">
                     <i class="fa-brands fa-whatsapp text-base"></i>
-                    <span>WhatsApp Quote</span>
+                    <span class="hidden xs:inline sm:inline">WhatsApp Quote</span>
+                    <span class="xs:hidden sm:hidden">Quote</span>
                 </a>
 
                 <!-- Mobile Menu Toggle -->
-                <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="lg:hidden p-2.5 rounded-xl bg-carbon-800 border border-white/10 text-gray-300 hover:text-white">
-                    <i class="fa-solid fa-bars text-lg"></i>
+                <button id="mobileMenuBtn" onclick="toggleMobileMenu()" aria-label="Toggle Menu" class="lg:hidden w-10 h-10 rounded-xl bg-carbon-800 border border-white/10 text-gray-300 hover:text-white flex items-center justify-center active:scale-95 transition">
+                    <i id="mobileMenuIcon" class="fa-solid fa-bars text-lg"></i>
                 </button>
             </div>
         </div>
 
         <!-- Mobile Dropdown Menu -->
-        <div id="mobileMenu" class="hidden lg:hidden bg-carbon-900 border-b border-white/10 px-4 pt-3 pb-6 space-y-3">
-            <a href="#portfolio" onclick="toggleMobileMenu()" class="block py-2 px-3 rounded-lg hover:bg-white/5 text-gray-200 font-medium">Portfolio Showcase (29 Works)</a>
-            <a href="#craftsmanship" onclick="toggleMobileMenu()" class="block py-2 px-3 rounded-lg hover:bg-white/5 text-gray-200 font-medium">Our Craftsmanship & Finishes</a>
-            <a href="#customizer" onclick="toggleMobileMenu()" class="block py-2 px-3 rounded-lg hover:bg-white/5 text-gray-200 font-medium">Interactive Quote Builder</a>
-            <a href="#b2b" onclick="toggleMobileMenu()" class="block py-2 px-3 rounded-lg hover:bg-white/5 text-gray-200 font-medium">For Workshops & Garages (B2B)</a>
-            <a href="#contact" onclick="toggleMobileMenu()" class="block py-2 px-3 rounded-lg hover:bg-white/5 text-gray-200 font-medium">Location: Muppathadam, Aluva</a>
-            <div class="pt-2 border-t border-white/10 flex gap-2">
-                
+        <div id="mobileMenu" class="hidden lg:hidden bg-carbon-900/98 backdrop-blur-xl border-b border-white/10 px-4 pt-3 pb-5 space-y-2 shadow-2xl">
+            <a href="#portfolio" onclick="toggleMobileMenu()" class="flex items-center justify-between py-2.5 px-3.5 rounded-xl hover:bg-white/5 active:bg-white/10 text-gray-200 font-medium text-sm">
+                <span><i class="fa-solid fa-images text-copper-400 w-6"></i> Portfolio Showcase</span>
+                <span class="text-xs bg-copper-500/20 text-copper-400 px-2 py-0.5 rounded-full font-semibold">29 Works</span>
+            </a>
+            <a href="#craftsmanship" onclick="toggleMobileMenu()" class="flex items-center py-2.5 px-3.5 rounded-xl hover:bg-white/5 active:bg-white/10 text-gray-200 font-medium text-sm">
+                <i class="fa-solid fa-award text-saddle-300 w-6"></i> Our Craftsmanship &amp; Finishes
+            </a>
+            <a href="#customizer" onclick="toggleMobileMenu()" class="flex items-center py-2.5 px-3.5 rounded-xl hover:bg-white/5 active:bg-white/10 text-gray-200 font-medium text-sm">
+                <i class="fa-solid fa-sliders text-copper-400 w-6"></i> Interactive Quote Builder
+            </a>
+            <a href="#b2b" onclick="toggleMobileMenu()" class="flex items-center py-2.5 px-3.5 rounded-xl hover:bg-white/5 active:bg-white/10 text-gray-200 font-medium text-sm">
+                <i class="fa-solid fa-handshake text-emerald-400 w-6"></i> For Workshops &amp; Garages (B2B)
+            </a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="flex items-center py-2.5 px-3.5 rounded-xl hover:bg-white/5 active:bg-white/10 text-gray-200 font-medium text-sm">
+                <i class="fa-solid fa-location-dot text-copper-400 w-6"></i> Location: Muppathadam, Aluva
+            </a>
+            <div class="pt-3 mt-2 border-t border-white/10 grid grid-cols-2 gap-2.5">
+                <a href="tel:+919388475951" class="py-2.5 px-3 rounded-xl bg-carbon-800 border border-white/10 text-white text-xs font-semibold flex items-center justify-center gap-2 active:scale-95 transition">
+                    <i class="fa-solid fa-phone text-copper-400"></i> Call Studio
+                </a>
+                <a href="https://wa.me/919388475951?text=Hi%20Newskins%2C%20I%20would%20like%20to%20enquire%20about%20steering%20wheel%20upholstery." target="_blank" rel="noopener noreferrer" class="py-2.5 px-3 rounded-xl bg-emerald-600 text-white text-xs font-semibold flex items-center justify-center gap-2 active:scale-95 transition">
+                    <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp Us
+                </a>
             </div>
         </div>
     </header>
 
     <!-- HERO SECTION -->
-    <section class="relative pt-10 pb-20 lg:pt-16 lg:pb-24 overflow-hidden">
+    <section class="relative pt-7 pb-14 sm:pt-12 sm:pb-20 lg:pt-16 lg:pb-24 overflow-hidden">
         <!-- Ambient Glow -->
-        <div class="absolute top-1/4 -left-32 w-96 h-96 bg-copper-500/15 rounded-full blur-3xl pointer-events-none"></div>
-        <div class="absolute bottom-10 right-0 w-96 h-96 bg-saddle-400/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute top-1/4 -left-32 w-80 sm:w-96 h-80 sm:h-96 bg-copper-500/15 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-10 right-0 w-80 sm:w-96 h-80 sm:h-96 bg-saddle-400/10 rounded-full blur-3xl pointer-events-none"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
                 
                 <!-- Left Column: Copy & CTAs -->
-                <div class="lg:col-span-7 space-y-6">
-                    <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-carbon-800 border border-saddle-400/30 text-saddle-300 text-xs font-semibold tracking-wide">
+                <div class="lg:col-span-7 space-y-5 sm:space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-carbon-800 border border-saddle-400/30 text-saddle-300 text-[11px] sm:text-xs font-semibold tracking-wide">
                         <i class="fa-solid fa-location-dot text-copper-400"></i>
                         <span>MUPPATHADAM, ALUVA • ERNAKULAM, KERALA</span>
                     </div>
 
-                    <h1 class="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl text-white leading-[1.1] tracking-tight">
+                    <h1 class="font-display font-extrabold text-3xl sm:text-5xl lg:text-6xl text-white leading-[1.12] tracking-tight">
                         FACTORY-GRADE FITMENT. <br>
                         <span class="text-transparent bg-clip-text bg-gradient-to-r from-copper-400 via-saddle-300 to-copper-500">
                             HAND-STITCHED MASTERY.
                         </span>
                     </h1>
 
-                    <p class="text-gray-300 text-base sm:text-lg leading-relaxed max-w-2xl">
-                        Welcome to <strong class="text-white">Newskins</strong>. We provide premium steering wheel and gear shift upholstery for both brand-new cars and classic restorations. From <span class="text-saddle-300">exact OEM factory-spec finishes to custom contrast stitching and wood-grain hybrids</span>. Trusted by car enthusiasts and leading workshops across Kerala.  
-                    
-                    </p> 
-                    <!-- Primary CTA Buttons -->
-                    <div class="flex flex-wrap items-center gap-4 pt-2">
-                        <a href="#portfolio" class="inline-flex items-center gap-3 px-7 py-4 rounded-2xl bg-gradient-to-r from-copper-500 to-copper-600 hover:from-copper-400 hover:to-copper-500 text-white font-display font-bold text-base shadow-xl shadow-copper-500/25 transition transform hover:-translate-y-0.5">
+                    <p class="text-gray-300 text-sm sm:text-lg leading-relaxed max-w-2xl">
+                        Welcome to <strong class="text-white">Newskins</strong>. We provide premium steering wheel and gear shift upholstery for both brand-new cars and classic restorations. From <span class="text-saddle-300">exact OEM factory-spec finishes to custom contrast stitching and wood-grain hybrids</span>. Trusted by car enthusiasts and leading workshops across Kerala.
+                    </p>
+
+                    <!-- Primary CTA Buttons (Full-width on mobile for easy thumb reach) -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-1 sm:pt-2">
+                        <a href="#portfolio" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-6 sm:px-7 py-3.5 sm:py-4 rounded-2xl bg-gradient-to-r from-copper-500 to-copper-600 hover:from-copper-400 hover:to-copper-500 active:scale-[0.99] text-white font-display font-bold text-sm sm:text-base shadow-xl shadow-copper-500/25 transition">
                             <span>Explore 29 Completed Works</span>
                             <i class="fa-solid fa-arrow-down"></i>
                         </a>
 
-                        <a href="https://wa.me/919388475951?text=Hi%20Newskins%2C%20I%20am%20sending%20a%20photo%20of%20my%20steering%20wheel%20%2F%20gear%20knob%20for%20an%20upholstery%20quote." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-6 py-4 rounded-2xl bg-carbon-800 hover:bg-carbon-700 text-white border border-emerald-500/40 hover:border-emerald-400 font-display font-bold text-base transition">
-                            <i class="fa-brands fa-whatsapp text-emerald-400 text-xl"></i>
+                        <a href="https://wa.me/919388475951?text=Hi%20Newskins%2C%20I%20am%20sending%20a%20photo%20of%20my%20steering%20wheel%20%2F%20gear%20knob%20for%20an%20upholstery%20quote." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 sm:gap-3 px-5 sm:px-6 py-3.5 sm:py-4 rounded-2xl bg-carbon-800 hover:bg-carbon-700 active:scale-[0.99] text-white border border-emerald-500/40 hover:border-emerald-400 font-display font-bold text-sm sm:text-base transition">
+                            <i class="fa-brands fa-whatsapp text-emerald-400 text-lg sm:text-xl"></i>
                             <span>Send Steering Photo on WhatsApp</span>
                         </a>
                     </div>
 
                     <!-- Trust Metrics -->
-                    <div class="pt-6 grid grid-cols-3 gap-4 sm:gap-6 border-t border-white/10">
+                    <div class="pt-5 sm:pt-6 grid grid-cols-3 gap-2.5 sm:gap-6 border-t border-white/10">
                         <div>
-                            <div class="font-display font-extrabold text-2xl sm:text-3xl text-white">29+</div>
-                            <div class="text-xs text-gray-400 mt-0.5">Verified Portfolio Pieces Below</div>
+                            <div class="font-display font-extrabold text-xl sm:text-3xl text-white">29+</div>
+                            <div class="text-[11px] sm:text-xs text-gray-400 mt-0.5 leading-snug">Verified Portfolio Pieces</div>
                         </div>
                         <div>
-                            <div class="font-display font-extrabold text-2xl sm:text-3xl text-saddle-300">100%</div>
-                            <div class="text-xs text-gray-400 mt-0.5">Wrinkle-Free Spoke Tucking</div>
+                            <div class="font-display font-extrabold text-xl sm:text-3xl text-saddle-300">100%</div>
+                            <div class="text-[11px] sm:text-xs text-gray-400 mt-0.5 leading-snug">Wrinkle-Free Spoke Tuck</div>
                         </div>
                         <div>
-                            <div class="font-display font-extrabold text-2xl sm:text-3xl text-copper-400">B2B &amp; Retail</div>
-                            <div class="text-xs text-gray-400 mt-0.5">Partner to Garages &amp; Dealers</div>
+                            <div class="font-display font-extrabold text-lg sm:text-3xl text-copper-400 leading-tight sm:leading-none">B2B &amp; Retail</div>
+                            <div class="text-[11px] sm:text-xs text-gray-400 mt-0.5 leading-snug">Garages &amp; Car Owners</div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Right Column: Featured Showcase Bento -->
                 <div class="lg:col-span-5">
-                    <div class="bg-carbon-800/90 border border-white/10 rounded-3xl p-4 sm:p-5 shadow-2xl stitch-border">
+                    <div class="bg-carbon-800/90 border border-white/10 rounded-3xl p-3.5 sm:p-5 shadow-2xl stitch-border">
                         <!-- Featured Main Image -->
                         <div class="relative rounded-2xl overflow-hidden aspect-[4/3] bg-carbon-950 group cursor-pointer" onclick="openLightboxByIndex(9)">
                             <img src="image_70a936.jpg" alt="Sport Black Leather with Red Stitching by Newskins" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="handleImageFallback(this, 'Sport Black Leather with Red Stitching')">
                             <div class="absolute inset-0 bg-gradient-to-t from-carbon-950 via-transparent to-transparent opacity-80"></div>
-                            <div class="absolute top-3 left-3 bg-copper-500 text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow">
+                            <div class="absolute top-3 left-3 bg-copper-500 text-white text-[10px] sm:text-[11px] font-bold uppercase tracking-wider px-2.5 sm:px-3 py-1 rounded-full shadow">
                                 Signature Sport Finish
                             </div>
-                            <div class="absolute bottom-3 left-3 right-3 flex items-end justify-between">
+                            <div class="absolute bottom-3 left-3 right-3 flex items-end justify-between gap-2">
                                 <div>
-                                    <p class="text-xs text-saddle-300 font-medium">Featured Work #10</p>
-                                    <h3 class="text-white font-display font-bold text-lg">Sport Black Leather + Red Stitch</h3>
+                                    <p class="text-[11px] sm:text-xs text-saddle-300 font-medium">Featured Work #10</p>
+                                    <h3 class="text-white font-display font-bold text-base sm:text-lg leading-tight">Sport Black Leather + Red Stitch</h3>
                                 </div>
-                                <span class="w-9 h-9 rounded-xl bg-white/10 backdrop-blur-md flex items-center justify-center text-white group-hover:bg-copper-500 transition">
-                                    <i class="fa-solid fa-expand text-sm"></i>
+                                <span class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-white/10 backdrop-blur-md flex items-center justify-center text-white group-hover:bg-copper-500 transition shrink-0">
+                                    <i class="fa-solid fa-expand text-xs sm:text-sm"></i>
                                 </span>
                             </div>
                         </div>
 
                         <!-- 3 Mini Thumbnails of Real Works -->
-                        <div class="grid grid-cols-3 gap-3 mt-3">
+                        <div class="grid grid-cols-3 gap-2.5 sm:gap-3 mt-2.5 sm:mt-3">
                             <div class="relative rounded-xl overflow-hidden aspect-square bg-carbon-950 cursor-pointer group border border-white/10" onclick="openLightboxByIndex(22)">
                                 <img src="image_71ac61.jpg" alt="Mercedes Burl Wood & Terracotta Leather" class="w-full h-full object-cover group-hover:scale-110 transition duration-300" onerror="handleImageFallback(this, 'Mercedes Burl Wood')">
-                                <div class="absolute inset-x-0 bottom-0 bg-black/70 text-[10px] text-center py-1 text-gray-200 font-medium truncate px-1">
+                                <div class="absolute inset-x-0 bottom-0 bg-black/75 text-[10px] text-center py-1 text-gray-200 font-medium truncate px-1">
                                     Mercedes Wood
                                 </div>
                             </div>
                             <div class="relative rounded-xl overflow-hidden aspect-square bg-carbon-950 cursor-pointer group border border-white/10" onclick="openLightboxByIndex(6)">
                                 <img src="image_70a85e.jpg" alt="Dual-Tone Tan & Black Custom Wheel" class="w-full h-full object-cover group-hover:scale-110 transition duration-300" onerror="handleImageFallback(this, 'Dual-Tone Custom')">
-                                <div class="absolute inset-x-0 bottom-0 bg-black/70 text-[10px] text-center py-1 text-gray-200 font-medium truncate px-1">
+                                <div class="absolute inset-x-0 bottom-0 bg-black/75 text-[10px] text-center py-1 text-gray-200 font-medium truncate px-1">
                                     Two-Tone Custom
                                 </div>
                             </div>
                             <div class="relative rounded-xl overflow-hidden aspect-square bg-carbon-950 cursor-pointer group border border-white/10" onclick="openLightboxByIndex(16)">
                                 <img src="image_70b0bb.jpg" alt="Toyota Wood-Trim Knob with Red Stitch" class="w-full h-full object-cover group-hover:scale-110 transition duration-300" onerror="handleImageFallback(this, 'Wood Gear Knob')">
-                                <div class="absolute inset-x-0 bottom-0 bg-black/70 text-[10px] text-center py-1 text-gray-200 font-medium truncate px-1">
+                                <div class="absolute inset-x-0 bottom-0 bg-black/75 text-[10px] text-center py-1 text-gray-200 font-medium truncate px-1">
                                     Wood Shift Knob
                                 </div>
                             </div>
                         </div>
 
                         <!-- Quick Workshop Callout -->
-                        <div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs text-gray-400 px-1">
-                            <span class="flex items-center gap-2"><i class="fa-solid fa-check-circle text-emerald-400"></i> Zero-bulk flush panel joints</span>
-                            <a href="#portfolio" class="text-copper-400 hover:underline font-semibold">See all 29 photos →</a>
+                        <div class="mt-3.5 pt-3 border-t border-white/10 flex items-center justify-between text-[11px] sm:text-xs text-gray-400 px-1">
+                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-check-circle text-emerald-400"></i> Zero-bulk flush panel joints</span>
+                            <a href="#portfolio" class="text-copper-400 hover:underline font-semibold">See all 29 →</a>
                         </div>
                     </div>
                 </div>
@@ -321,48 +352,48 @@
     <div class="stitch-divider"></div>
 
     <!-- PORTFOLIO GALLERY SECTION (ALL 29 REAL IMAGES) -->
-    <section id="portfolio" class="py-20 bg-carbon-900/60">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="portfolio" class="py-14 sm:py-20 bg-carbon-900/60">
+        <div class="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8">
             
             <!-- Section Header -->
-            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6 mb-6 sm:mb-10">
                 <div>
-                    <div class="inline-flex items-center gap-2 text-copper-400 text-xs font-bold uppercase tracking-widest mb-2">
+                    <div class="inline-flex items-center gap-2 text-copper-400 text-xs font-bold uppercase tracking-widest mb-1.5 sm:mb-2">
                         <i class="fa-solid fa-camera-retro"></i> Authentic Work Showcase
                     </div>
-                    <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white">
+                    <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-white">
                         Our 29-Piece Craftsmanship Gallery
                     </h2>
-                    <p class="text-gray-400 text-sm sm:text-base mt-2 max-w-2xl">
-                        Every steering wheel and gear knob below was hand-upholstered by <strong class="text-white">Newskins</strong>. Click any photo to inspect the stitch tension, spoke tucking, and panel joints up close, or request the exact same style on WhatsApp.
+                    <p class="text-gray-400 text-xs sm:text-base mt-1.5 sm:mt-2 max-w-2xl leading-relaxed">
+                        Every steering wheel and gear knob below was hand-upholstered by <strong class="text-white">Newskins</strong>. Tap any photo to zoom in on the stitch tension and spoke tucking, or enquire directly on WhatsApp.
                     </p>
                 </div>
 
-                <!-- Search / Local Photo Loader Helper -->
-                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5">
-                    <div class="relative">
+                <!-- Search Input (16px text-base on mobile prevents iOS Safari auto-zoom) -->
+                <div class="flex items-center">
+                    <div class="relative w-full sm:w-64">
                         <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400 text-xs"></i>
-                        <input id="portfolioSearch" type="text" oninput="filterPortfolio()" placeholder="Search Mercedes, Toyota, Red stitch, Knob..." class="w-full sm:w-64 pl-9 pr-4 py-2.5 rounded-xl bg-carbon-800 border border-white/10 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-copper-500">
+                        <input id="portfolioSearch" type="text" oninput="filterPortfolio()" placeholder="Search Mercedes, Red stitch, Knob..." class="w-full pl-9 pr-4 py-2.5 rounded-xl bg-carbon-800 border border-white/10 text-base sm:text-sm text-white placeholder-gray-500 focus:outline-none focus:border-copper-500">
                     </div>
                 </div>
             </div>
 
-            <!-- Category Filter Pills -->
-            <div id="filterPillsContainer" class="flex items-center gap-2 overflow-x-auto pb-4 mb-8 no-scrollbar">
-                <!-- Dynamically populated by JS with exact counts -->
+            <!-- Category Filter Pills (Swipeable horizontal bar on mobile) -->
+            <div id="filterPillsContainer" class="flex items-center gap-2 overflow-x-auto pb-3 mb-5 sm:mb-8 no-scrollbar snap-x">
+                <!-- Dynamically populated by JS -->
             </div>
 
-            <!-- Portfolio Grid -->
-            <div id="portfolioGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- Portfolio Grid (2 columns on mobile for fast browsing, 3 on lg, 4 on xl) -->
+            <div id="portfolioGrid" class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6">
                 <!-- Populated dynamically with all 29 real works -->
             </div>
 
             <!-- Empty State if search doesn't match -->
-            <div id="portfolioEmpty" class="hidden text-center py-16 bg-carbon-800/50 rounded-3xl border border-white/10">
-                <i class="fa-solid fa-steering-wheel text-4xl text-gray-500 mb-3"></i>
-                <h3 class="font-display font-bold text-xl text-white">No matching upholstery pieces found</h3>
-                <p class="text-gray-400 text-sm mt-1">Try clearing your search or selecting "All Works (29)".</p>
-                <button onclick="resetPortfolioFilter()" class="mt-4 px-5 py-2.5 rounded-xl bg-copper-500 text-white text-sm font-semibold">Show All 29 Works</button>
+            <div id="portfolioEmpty" class="hidden text-center py-14 px-4 bg-carbon-800/50 rounded-3xl border border-white/10">
+                <i class="fa-solid fa-circle-notch text-3xl text-gray-500 mb-3"></i>
+                <h3 class="font-display font-bold text-lg sm:text-xl text-white">No matching upholstery pieces found</h3>
+                <p class="text-gray-400 text-xs sm:text-sm mt-1">Try clearing your search or selecting "All Works (29)".</p>
+                <button onclick="resetPortfolioFilter()" class="mt-4 px-5 py-2.5 rounded-xl bg-copper-500 text-white text-xs sm:text-sm font-semibold">Show All 29 Works</button>
             </div>
 
         </div>
@@ -371,59 +402,59 @@
     <div class="stitch-divider"></div>
 
     <!-- CRAFTSMANSHIP & WHY NEWSKINS SECTION -->
-    <section id="craftsmanship" class="py-20">
+    <section id="craftsmanship" class="py-14 sm:py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-14">
+            <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
                 <span class="text-copper-400 text-xs font-bold uppercase tracking-widest">Why Car Owners &amp; Workshops Choose Us</span>
-                <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white mt-2">
+                <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-white mt-2">
                     The Difference Between a Loose Cover &amp; True Upholstery
                 </h2>
-                <p class="text-gray-400 text-sm sm:text-base mt-3">
+                <p class="text-gray-400 text-xs sm:text-base mt-2.5 leading-relaxed">
                     Accessory shops slip bulky pre-made covers over your wheel. At <strong class="text-white">Newskins (Muppathadam, Aluva)</strong>, we pattern, skive, wrap, and hand-lace each wheel so it looks and feels like it just rolled off the factory floor.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
                 <!-- Feature 1 -->
-                <div class="bg-carbon-800/90 border border-white/10 rounded-2xl p-6 stitch-border">
-                    <div class="w-12 h-12 rounded-xl bg-copper-500/15 border border-copper-500/30 flex items-center justify-center text-copper-400 text-xl mb-5">
+                <div class="bg-carbon-800/90 border border-white/10 rounded-2xl p-5 sm:p-6 stitch-border">
+                    <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-copper-500/15 border border-copper-500/30 flex items-center justify-center text-copper-400 text-lg sm:text-xl mb-4">
                         <i class="fa-solid fa-layer-group"></i>
                     </div>
-                    <h3 class="font-display font-bold text-lg text-white mb-2">Flush Skived Panel Joints</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
+                    <h3 class="font-display font-bold text-base sm:text-lg text-white mb-1.5">Flush Skived Panel Joints</h3>
+                    <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">
                         Where the 4 leather segments meet around the rim, we thin (skive) the edges so the joint sits 100% flat without uncomfortable ridges under your fingers.
                     </p>
                 </div>
 
                 <!-- Feature 2 -->
-                <div class="bg-carbon-800/90 border border-white/10 rounded-2xl p-6 stitch-border">
-                    <div class="w-12 h-12 rounded-xl bg-saddle-400/15 border border-saddle-400/30 flex items-center justify-center text-saddle-300 text-xl mb-5">
+                <div class="bg-carbon-800/90 border border-white/10 rounded-2xl p-5 sm:p-6 stitch-border">
+                    <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-saddle-400/15 border border-saddle-400/30 flex items-center justify-center text-saddle-300 text-lg sm:text-xl mb-4">
                         <i class="fa-solid fa-compress"></i>
                     </div>
-                    <h3 class="font-display font-bold text-lg text-white mb-2">Tight Spoke &amp; Control Tucking</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
+                    <h3 class="font-display font-bold text-base sm:text-lg text-white mb-1.5">Tight Spoke &amp; Control Tucking</h3>
+                    <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">
                         We carefully tuck the material behind steering audio switches, silver bezels, and airbag housings with zero bunching or peeling corners.
                     </p>
                 </div>
 
                 <!-- Feature 3 -->
-                <div class="bg-carbon-800/90 border border-white/10 rounded-2xl p-6 stitch-border">
-                    <div class="w-12 h-12 rounded-xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-xl mb-5">
+                <div class="bg-carbon-800/90 border border-white/10 rounded-2xl p-5 sm:p-6 stitch-border">
+                    <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-lg sm:text-xl mb-4">
                         <i class="fa-solid fa-palette"></i>
                     </div>
-                    <h3 class="font-display font-bold text-lg text-white mb-2">Exact OEM Shade Matching</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
+                    <h3 class="font-display font-bold text-base sm:text-lg text-white mb-1.5">Exact OEM Shade Matching</h3>
+                    <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">
                         From Mercedes Almond Beige &amp; Espresso Brown to Toyota Light Grey, Sage Grey, and Nappa Black, we match your interior dashboard &amp; seat colour.
                     </p>
                 </div>
 
                 <!-- Feature 4 -->
-                <div class="bg-carbon-800/90 border border-white/10 rounded-2xl p-6 stitch-border">
-                    <div class="w-12 h-12 rounded-xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-400 text-xl mb-5">
+                <div class="bg-carbon-800/90 border border-white/10 rounded-2xl p-5 sm:p-6 stitch-border">
+                    <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-400 text-lg sm:text-xl mb-4">
                         <i class="fa-solid fa-gears"></i>
                     </div>
-                    <h3 class="font-display font-bold text-lg text-white mb-2">Gear Knobs &amp; Wood Hybrids</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
+                    <h3 class="font-display font-bold text-base sm:text-lg text-white mb-1.5">Gear Knobs &amp; Wood Hybrids</h3>
+                    <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">
                         Complete your cabin restoration with matching baseball-stitched manual/automatic gear knobs, 4WD transfer levers, and wood-grain steering rims.
                     </p>
                 </div>
@@ -432,42 +463,42 @@
     </section>
 
     <!-- INTERACTIVE CUSTOMIZER & WHATSAPP QUOTE BUILDER -->
-    <section id="customizer" class="py-20 bg-carbon-800/60 border-y border-white/10">
+    <section id="customizer" class="py-14 sm:py-20 bg-carbon-800/60 border-y border-white/10">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
                 
                 <!-- Left Info Column -->
-                <div class="lg:col-span-5 space-y-5">
+                <div class="lg:col-span-5 space-y-4 sm:space-y-5">
                     <span class="inline-flex items-center gap-2 text-copper-400 text-xs font-bold uppercase tracking-widest">
                         <i class="fa-solid fa-sliders"></i> Instant Specification Builder
                     </span>
-                    <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white">
+                    <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-white">
                         Configure Your Steering Wrap &amp; Get a Quote
                     </h2>
-                    <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
-                        Select what you need below and click <strong class="text-white">"Send Specification on WhatsApp"</strong>. It will open a direct chat with Newskins (<span class="text-emerald-400 font-semibold">+91 9388475951</span>) where you can also attach a photo of your current wheel.
+                    <p class="text-gray-300 text-xs sm:text-base leading-relaxed">
+                        Select what you need below and tap <strong class="text-white">"Send Specification on WhatsApp"</strong>. It will open a direct chat with Newskins (<span class="text-emerald-400 font-semibold">+91 9388475951</span>) where you can also attach a photo of your current wheel.
                     </p>
 
                     <!-- How it works steps -->
-                    <div class="space-y-4 pt-3">
-                        <div class="flex items-start gap-3.5 bg-carbon-900/80 p-4 rounded-2xl border border-white/5">
+                    <div class="space-y-3 pt-2">
+                        <div class="flex items-start gap-3.5 bg-carbon-900/80 p-3.5 sm:p-4 rounded-2xl border border-white/5">
                             <span class="w-7 h-7 rounded-full bg-copper-500 text-white font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">1</span>
                             <div>
-                                <h4 class="text-white font-semibold text-sm">Send Photo &amp; Specs on WhatsApp</h4>
-                                <p class="text-gray-400 text-xs mt-0.5">Pick your options here or snap a quick photo of your worn steering wheel or shift knob.</p>
+                                <h4 class="text-white font-semibold text-xs sm:text-sm">Send Photo &amp; Specs on WhatsApp</h4>
+                                <p class="text-gray-400 text-xs mt-0.5">Pick your options here or snap a quick photo of your steering wheel or shift knob.</p>
                             </div>
                         </div>
-                        <div class="flex items-start gap-3.5 bg-carbon-900/80 p-4 rounded-2xl border border-white/5">
+                        <div class="flex items-start gap-3.5 bg-carbon-900/80 p-3.5 sm:p-4 rounded-2xl border border-white/5">
                             <span class="w-7 h-7 rounded-full bg-copper-500 text-white font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">2</span>
                             <div>
-                                <h4 class="text-white font-semibold text-sm">Drop Off at Muppathadam, Aluva (or Workshop Courier)</h4>
+                                <h4 class="text-white font-semibold text-xs sm:text-sm">Drop Off at Muppathadam, Aluva (or Courier)</h4>
                                 <p class="text-gray-400 text-xs mt-0.5">Garages and customers across Ernakulam &amp; Kerala can send the removed wheel or visit us.</p>
                             </div>
                         </div>
-                        <div class="flex items-start gap-3.5 bg-carbon-900/80 p-4 rounded-2xl border border-white/5">
+                        <div class="flex items-start gap-3.5 bg-carbon-900/80 p-3.5 sm:p-4 rounded-2xl border border-white/5">
                             <span class="w-7 h-7 rounded-full bg-copper-500 text-white font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">3</span>
                             <div>
-                                <h4 class="text-white font-semibold text-sm">Precision Hand-Stitching &amp; Delivery</h4>
+                                <h4 class="text-white font-semibold text-xs sm:text-sm">Precision Hand-Stitching &amp; Delivery</h4>
                                 <p class="text-gray-400 text-xs mt-0.5">Receive your wheel back with factory-tight seams ready for installation.</p>
                             </div>
                         </div>
@@ -475,30 +506,30 @@
                 </div>
 
                 <!-- Right Interactive Builder Form -->
-                <div class="lg:col-span-7 bg-carbon-900 border border-white/15 rounded-3xl p-6 sm:p-8 shadow-2xl stitch-border">
-                    <div class="space-y-6">
+                <div class="lg:col-span-7 bg-carbon-900 border border-white/15 rounded-3xl p-4 sm:p-8 shadow-2xl stitch-border">
+                    <div class="space-y-5 sm:space-y-6">
                         
                         <!-- 1. Customer Type -->
                         <div>
-                            <label class="block text-xs font-bold uppercase tracking-wider text-saddle-300 mb-2.5">
+                            <label class="block text-xs font-bold uppercase tracking-wider text-saddle-300 mb-2">
                                 1. I am enquiring as a:
                             </label>
-                            <div class="grid grid-cols-2 gap-3" id="custTypeGroup">
-                                <button type="button" onclick="selectOption('customerType', 'Car Owner (Individual)', this)" class="opt-btn active-opt py-3 px-4 rounded-xl border border-copper-500 bg-copper-500/15 text-white text-sm font-semibold flex items-center justify-center gap-2 transition">
+                            <div class="grid grid-cols-2 gap-2.5 sm:gap-3" id="custTypeGroup">
+                                <button type="button" onclick="selectOption('customerType', 'Car Owner (Individual)', this)" class="opt-btn active-opt py-3 px-3 sm:px-4 rounded-xl border border-copper-500 bg-copper-500/15 text-white text-xs sm:text-sm font-semibold flex items-center justify-center gap-2 transition">
                                     <i class="fa-solid fa-car"></i> Car Owner
                                 </button>
-                                <button type="button" onclick="selectOption('customerType', 'Workshop / Dealership Partner (B2B)', this)" class="opt-btn py-3 px-4 rounded-xl border border-white/10 bg-carbon-800 text-gray-300 hover:text-white text-sm font-semibold flex items-center justify-center gap-2 transition">
-                                    <i class="fa-solid fa-screwdriver-wrench"></i> Workshop / Garage (B2B)
+                                <button type="button" onclick="selectOption('customerType', 'Workshop / Dealership Partner (B2B)', this)" class="opt-btn py-3 px-3 sm:px-4 rounded-xl border border-white/10 bg-carbon-800 text-gray-300 hover:text-white text-xs sm:text-sm font-semibold flex items-center justify-center gap-2 transition">
+                                    <i class="fa-solid fa-screwdriver-wrench"></i> Workshop (B2B)
                                 </button>
                             </div>
                         </div>
 
                         <!-- 2. Item to Upholster -->
                         <div>
-                            <label class="block text-xs font-bold uppercase tracking-wider text-saddle-300 mb-2.5">
+                            <label class="block text-xs font-bold uppercase tracking-wider text-saddle-300 mb-2">
                                 2. What do you want upholstered?
                             </label>
-                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3" id="itemTypeGroup">
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3" id="itemTypeGroup">
                                 <button type="button" onclick="selectOption('itemType', 'Steering Wheel Wrap', this)" class="opt-btn active-opt py-3 px-3 rounded-xl border border-copper-500 bg-copper-500/15 text-white text-xs sm:text-sm font-semibold transition">
                                     Steering Wheel Only
                                 </button>
@@ -513,42 +544,42 @@
 
                         <!-- 3. Finish Style -->
                         <div>
-                            <label class="block text-xs font-bold uppercase tracking-wider text-saddle-300 mb-2.5">
+                            <label class="block text-xs font-bold uppercase tracking-wider text-saddle-300 mb-2">
                                 3. Preferred Finish &amp; Leather Style:
                             </label>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="finishStyleGroup">
-                                <button type="button" onclick="selectOption('finishStyle', 'OEM Factory Colour Match (Black/Beige/Grey/Brown)', this)" class="opt-btn active-opt py-3 px-4 rounded-xl border border-copper-500 bg-copper-500/15 text-white text-left text-xs sm:text-sm font-semibold transition">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3" id="finishStyleGroup">
+                                <button type="button" onclick="selectOption('finishStyle', 'OEM Factory Colour Match (Black/Beige/Grey/Brown)', this)" class="opt-btn active-opt py-3 px-3.5 rounded-xl border border-copper-500 bg-copper-500/15 text-white text-left text-xs sm:text-sm font-semibold transition">
                                     <div class="font-bold">OEM Factory Restoration</div>
                                     <div class="text-[11px] text-gray-400 font-normal">Original colour &amp; factory stitch</div>
                                 </button>
-                                <button type="button" onclick="selectOption('finishStyle', 'Sport Custom with Contrast Stitching', this)" class="opt-btn py-3 px-4 rounded-xl border border-white/10 bg-carbon-800 text-gray-300 hover:text-white text-left text-xs sm:text-sm font-semibold transition">
+                                <button type="button" onclick="selectOption('finishStyle', 'Sport Custom with Contrast Stitching', this)" class="opt-btn py-3 px-3.5 rounded-xl border border-white/10 bg-carbon-800 text-gray-300 hover:text-white text-left text-xs sm:text-sm font-semibold transition">
                                     <div class="font-bold">Sport Contrast Stitch</div>
                                     <div class="text-[11px] text-gray-400 font-normal">Black leather + Red / Cream / Tan stitch</div>
                                 </button>
-                                <button type="button" onclick="selectOption('finishStyle', 'Two-Tone Custom Leather Wrap', this)" class="opt-btn py-3 px-4 rounded-xl border border-white/10 bg-carbon-800 text-gray-300 hover:text-white text-left text-xs sm:text-sm font-semibold transition">
+                                <button type="button" onclick="selectOption('finishStyle', 'Two-Tone Custom Leather Wrap', this)" class="opt-btn py-3 px-3.5 rounded-xl border border-white/10 bg-carbon-800 text-gray-300 hover:text-white text-left text-xs sm:text-sm font-semibold transition">
                                     <div class="font-bold">Two-Tone Custom</div>
                                     <div class="text-[11px] text-gray-400 font-normal">Dual-colour leather combination</div>
                                 </button>
-                                <button type="button" onclick="selectOption('finishStyle', 'Luxury European / Wood-Grain Hybrid', this)" class="opt-btn py-3 px-4 rounded-xl border border-white/10 bg-carbon-800 text-gray-300 hover:text-white text-left text-xs sm:text-sm font-semibold transition">
+                                <button type="button" onclick="selectOption('finishStyle', 'Luxury European / Wood-Grain Hybrid', this)" class="opt-btn py-3 px-3.5 rounded-xl border border-white/10 bg-carbon-800 text-gray-300 hover:text-white text-left text-xs sm:text-sm font-semibold transition">
                                     <div class="font-bold">Luxury / Wood-Trim Hybrid</div>
                                     <div class="text-[11px] text-gray-400 font-normal">Mercedes/Audi spec or wood/piano rim</div>
                                 </button>
                             </div>
                         </div>
 
-                        <!-- 4. Car Make & Model Input -->
+                        <!-- 4. Car Make & Model Input (text-base on mobile prevents iOS zoom) -->
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div>
                                 <label class="block text-xs font-bold uppercase tracking-wider text-saddle-300 mb-2">
                                     4. Car Brand &amp; Model (Optional)
                                 </label>
-                                <input id="carModelInput" type="text" placeholder="e.g., Innova Crysta, Mercedes E-Class, Swift..." class="w-full px-4 py-3 rounded-xl bg-carbon-800 border border-white/10 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-copper-500">
+                                <input id="carModelInput" type="text" placeholder="e.g., Innova Crysta, Mercedes, Swift..." class="w-full px-4 py-3 rounded-xl bg-carbon-800 border border-white/10 text-base sm:text-sm text-white placeholder-gray-500 focus:outline-none focus:border-copper-500">
                             </div>
                             <div>
                                 <label class="block text-xs font-bold uppercase tracking-wider text-saddle-300 mb-2">
                                     5. Preferred Leather / Stitch Shade
                                 </label>
-                                <select id="shadeSelect" class="w-full px-4 py-3 rounded-xl bg-carbon-800 border border-white/10 text-sm text-white focus:outline-none focus:border-copper-500">
+                                <select id="shadeSelect" class="w-full px-4 py-3 rounded-xl bg-carbon-800 border border-white/10 text-base sm:text-sm text-white focus:outline-none focus:border-copper-500">
                                     <option value="Matte Black with Factory Black Stitch">Matte Black + Black Stitch (OEM)</option>
                                     <option value="Matte Black with Sport Red Stitch">Matte Black + Sport Red Stitch</option>
                                     <option value="Matte Black with Cream / Tan Cross-Stitch">Matte Black + Cream/Tan Cross-Stitch</option>
@@ -562,13 +593,13 @@
                         </div>
 
                         <!-- Submit to WhatsApp Button -->
-                        <div class="pt-2">
-                            <button type="button" onclick="sendCustomQuoteToWhatsApp()" class="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-display font-bold text-base shadow-xl shadow-emerald-600/25 flex items-center justify-center gap-3 transition transform hover:-translate-y-0.5">
-                                <i class="fa-brands fa-whatsapp text-2xl"></i>
-                                <span>Send Specification to Newskins on WhatsApp</span>
+                        <div class="pt-1">
+                            <button type="button" onclick="sendCustomQuoteToWhatsApp()" class="w-full py-3.5 sm:py-4 px-5 rounded-2xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 active:scale-[0.99] text-white font-display font-bold text-sm sm:text-base shadow-xl shadow-emerald-600/25 flex items-center justify-center gap-2.5 sm:gap-3 transition">
+                                <i class="fa-brands fa-whatsapp text-xl sm:text-2xl"></i>
+                                <span>Send Specification on WhatsApp</span>
                             </button>
-                            <p class="text-center text-xs text-gray-400 mt-2.5">
-                                Direct WhatsApp: <strong class="text-gray-200">+91 9388475951</strong> • Fast response for both individual owners &amp; workshops
+                            <p class="text-center text-[11px] sm:text-xs text-gray-400 mt-2.5">
+                                Direct WhatsApp: <strong class="text-gray-200">+91 9388475951</strong> • Fast response for car owners &amp; workshops
                             </p>
                         </div>
 
@@ -580,48 +611,48 @@
     </section>
 
     <!-- B2B WORKSHOP, GARAGE & DEALERSHIP PARTNER HUB -->
-    <section id="b2b" class="py-20">
+    <section id="b2b" class="py-14 sm:py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-gradient-to-br from-carbon-800 via-carbon-800 to-carbon-900 border border-saddle-400/30 rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden stitch-border">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+            <div class="bg-gradient-to-br from-carbon-800 via-carbon-800 to-carbon-900 border border-saddle-400/30 rounded-3xl p-5 sm:p-12 shadow-2xl relative overflow-hidden stitch-border">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-8 items-center relative z-10">
                     <div class="lg:col-span-8 space-y-4">
-                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-copper-500/20 border border-copper-500/40 text-copper-400 text-xs font-bold uppercase tracking-wider">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-copper-500/20 border border-copper-500/40 text-copper-400 text-[11px] sm:text-xs font-bold uppercase tracking-wider">
                             <i class="fa-solid fa-handshake"></i> B2B Partner Program — Ernakulam &amp; All Kerala
                         </div>
-                        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white">
+                        <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-white leading-tight">
                             Own an Automotive Workshop, Detailing Studio, or Pre-Owned Car Dealership?
                         </h2>
-                        <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
-                            A peeled or sticky steering wheel immediately lowers the perceived value of a car. Partner with <strong class="text-white">Newskins (Muppathadam, Aluva)</strong> for reliable, OEM-grade steering wheel and gear knob re-upholstery for your client vehicles.
+                        <p class="text-gray-300 text-xs sm:text-base leading-relaxed">
+                            A peeled or worn steering wheel immediately lowers the perceived value of a car. Partner with <strong class="text-white">Newskins (Muppathadam, Aluva)</strong> for reliable, OEM-grade steering wheel and gear knob upholstery for your client vehicles.
                         </p>
 
-                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-3">
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 pt-2">
                             <div class="bg-carbon-900/80 p-4 rounded-2xl border border-white/10">
-                                <div class="text-saddle-300 font-bold text-sm mb-1"><i class="fa-solid fa-tags mr-1.5 text-copper-400"></i> Trade / B2B Pricing</div>
+                                <div class="text-saddle-300 font-bold text-xs sm:text-sm mb-1"><i class="fa-solid fa-tags mr-1.5 text-copper-400"></i> Trade / B2B Pricing</div>
                                 <p class="text-xs text-gray-400">Special partner rates for regular orders from mechanics, body shops, and used car showrooms.</p>
                             </div>
                             <div class="bg-carbon-900/80 p-4 rounded-2xl border border-white/10">
-                                <div class="text-saddle-300 font-bold text-sm mb-1"><i class="fa-solid fa-award mr-1.5 text-copper-400"></i> Luxury Car Safe</div>
+                                <div class="text-saddle-300 font-bold text-xs sm:text-sm mb-1"><i class="fa-solid fa-award mr-1.5 text-copper-400"></i> Luxury Car Safe</div>
                                 <p class="text-xs text-gray-400">Proven experience with Mercedes-Benz, Audi, Honda, Toyota, and multi-function steering frames.</p>
                             </div>
                             <div class="bg-carbon-900/80 p-4 rounded-2xl border border-white/10">
-                                <div class="text-saddle-300 font-bold text-sm mb-1"><i class="fa-solid fa-truck-fast mr-1.5 text-copper-400"></i> Easy Drop &amp; Courier</div>
+                                <div class="text-saddle-300 font-bold text-xs sm:text-sm mb-1"><i class="fa-solid fa-truck-fast mr-1.5 text-copper-400"></i> Easy Drop &amp; Courier</div>
                                 <p class="text-xs text-gray-400">Conveniently located in Muppathadam, Aluva—easy access from Kochi, Paravur, Angamaly &amp; Thrissur.</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="lg:col-span-4 flex flex-col items-stretch sm:items-center lg:items-end justify-center">
-                        <div class="bg-carbon-950/90 border border-white/10 rounded-2xl p-6 w-full text-center space-y-4">
-                            <div class="w-14 h-14 rounded-2xl bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-2xl mx-auto">
+                        <div class="bg-carbon-950/90 border border-white/10 rounded-2xl p-5 sm:p-6 w-full text-center space-y-4">
+                            <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-xl sm:text-2xl mx-auto">
                                 <i class="fa-brands fa-whatsapp"></i>
                             </div>
                             <div>
-                                <h3 class="font-display font-bold text-xl text-white">Connect for Workshop Rates</h3>
+                                <h3 class="font-display font-bold text-lg sm:text-xl text-white">Connect for Workshop Rates</h3>
                                 <p class="text-xs text-gray-400 mt-1">Message us your workshop name &amp; location to start partnering.</p>
                             </div>
-                            <a href="https://wa.me/919388475951?text=Hi%20Newskins%2C%20I%20am%20a%20workshop%20%2F%20dealership%20owner%20and%20would%20like%20to%20connect%20for%20B2B%20steering%20wheel%20upholstery%20work." target="_blank" rel="noopener noreferrer" class="w-full py-3.5 px-5 rounded-xl bg-copper-500 hover:bg-copper-400 text-white font-display font-bold text-sm inline-flex items-center justify-center gap-2 shadow-lg shadow-copper-500/25 transition">
-                                <i class="fa-brands fa-whatsapp text-lg"></i>
+                            <a href="https://wa.me/919388475951?text=Hi%20Newskins%2C%20I%20am%20a%20workshop%20%2F%20dealership%20owner%20and%20would%20like%20to%20connect%20for%20B2B%20steering%20wheel%20upholstery%20work." target="_blank" rel="noopener noreferrer" class="w-full py-3.5 px-5 rounded-xl bg-copper-500 hover:bg-copper-400 active:scale-95 text-white font-display font-bold text-xs sm:text-sm inline-flex items-center justify-center gap-2 shadow-lg shadow-copper-500/25 transition">
+                                <i class="fa-brands fa-whatsapp text-base sm:text-lg"></i>
                                 <span>Enquire for B2B Partnership</span>
                             </a>
                             <div class="text-xs text-gray-400">
@@ -635,43 +666,43 @@
     </section>
 
     <!-- LOCATION & CONTACT SECTION -->
-    <section id="contact" class="py-20 bg-carbon-900 border-t border-white/10">
+    <section id="contact" class="py-14 sm:py-20 bg-carbon-900 border-t border-white/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 items-center">
                 
-                <div class="lg:col-span-6 space-y-6">
+                <div class="lg:col-span-6 space-y-5 sm:space-y-6">
                     <span class="text-copper-400 text-xs font-bold uppercase tracking-widest">Visit or Contact Us</span>
-                    <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white">
+                    <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-white">
                         Newskins Upholstery Studio — Aluva, Kerala
                     </h2>
-                    <p class="text-gray-400 text-sm sm:text-base">
-                        Have a worn steering wheel or gear shift knob? Send us a photo on WhatsApp first for an immediate estimate and appointment slot.
+                    <p class="text-gray-400 text-xs sm:text-base leading-relaxed">
+                        Want to upgrade a new car or restore a worn steering wheel or shift knob? Send us a photo on WhatsApp first for an immediate estimate and appointment slot.
                     </p>
 
-                    <div class="space-y-4">
-                        <div class="flex items-start gap-4 bg-carbon-800/80 p-4 rounded-2xl border border-white/10">
-                            <div class="w-11 h-11 rounded-xl bg-copper-500/15 text-copper-400 flex items-center justify-center text-lg shrink-0">
+                    <div class="space-y-3.5 sm:space-y-4">
+                        <div class="flex items-start gap-3.5 sm:gap-4 bg-carbon-800/80 p-4 rounded-2xl border border-white/10">
+                            <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-copper-500/15 text-copper-400 flex items-center justify-center text-base sm:text-lg shrink-0">
                                 <i class="fa-solid fa-location-dot"></i>
                             </div>
                             <div>
-                                <h4 class="text-white font-bold text-sm">Studio Address</h4>
-                                <p class="text-gray-300 text-sm mt-0.5">Newskins Steering &amp; Gear Knob Upholstery</p>
+                                <h4 class="text-white font-bold text-xs sm:text-sm">Studio Address</h4>
+                                <p class="text-gray-300 text-xs sm:text-sm mt-0.5">Newskins Steering &amp; Gear Knob Upholstery</p>
                                 <p class="text-gray-400 text-xs">Muppathadam, Aluva, Ernakulam District, Kerala, India</p>
                             </div>
                         </div>
 
-                        <div class="flex items-start gap-4 bg-carbon-800/80 p-4 rounded-2xl border border-white/10">
-                            <div class="w-11 h-11 rounded-xl bg-emerald-500/15 text-emerald-400 flex items-center justify-center text-lg shrink-0">
+                        <div class="flex items-start gap-3.5 sm:gap-4 bg-carbon-800/80 p-4 rounded-2xl border border-white/10">
+                            <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-emerald-500/15 text-emerald-400 flex items-center justify-center text-base sm:text-lg shrink-0">
                                 <i class="fa-brands fa-whatsapp"></i>
                             </div>
                             <div>
-                                <h4 class="text-white font-bold text-sm">WhatsApp &amp; Phone</h4>
-                                <p class="text-gray-300 text-sm mt-0.5 font-semibold">+91 9388475951</p>
-                                <div class="flex flex-wrap gap-3 mt-2">
-                                    <a href="https://wa.me/919388475951?text=Hi%20Newskins%2C%20I%20would%20like%20to%20enquire%20about%20steering%20wheel%20upholstery." target="_blank" rel="noopener noreferrer" class="text-xs bg-emerald-600/20 text-emerald-300 border border-emerald-500/30 px-3 py-1 rounded-lg font-medium hover:bg-emerald-600 hover:text-white transition">
+                                <h4 class="text-white font-bold text-xs sm:text-sm">WhatsApp &amp; Phone</h4>
+                                <p class="text-gray-300 text-xs sm:text-sm mt-0.5 font-semibold">+91 9388475951</p>
+                                <div class="flex flex-wrap gap-2.5 mt-2.5">
+                                    <a href="https://wa.me/919388475951?text=Hi%20Newskins%2C%20I%20would%20like%20to%20enquire%20about%20steering%20wheel%20upholstery." target="_blank" rel="noopener noreferrer" class="text-xs bg-emerald-600/20 text-emerald-300 border border-emerald-500/30 px-3 py-1.5 rounded-lg font-medium hover:bg-emerald-600 hover:text-white transition">
                                         Open WhatsApp Chat →
                                     </a>
-                                    <a href="tel:+919388475951" class="text-xs bg-white/10 text-gray-200 px-3 py-1 rounded-lg font-medium hover:bg-white/20 transition">
+                                    <a href="tel:+919388475951" class="text-xs bg-white/10 text-gray-200 px-3 py-1.5 rounded-lg font-medium hover:bg-white/20 transition">
                                         Call Now
                                     </a>
                                 </div>
@@ -680,15 +711,15 @@
                     </div>
                 </div>
 
-                <!-- Right Column: Interactive Map Card / Service Area -->
+                <!-- Right Column: Service Area Card -->
                 <div class="lg:col-span-6">
-                    <div class="bg-carbon-800 border border-white/10 rounded-3xl p-6 sm:p-8 space-y-6 stitch-border">
-                        <div class="flex items-center justify-between border-b border-white/10 pb-4">
+                    <div class="bg-carbon-800 border border-white/10 rounded-3xl p-5 sm:p-8 space-y-5 sm:space-y-6 stitch-border">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-white/10 pb-4">
                             <div>
                                 <span class="text-xs text-saddle-300 uppercase font-bold tracking-wider">Service Coverage</span>
-                                <h3 class="text-white font-display font-bold text-xl mt-0.5">Muppathadam, Aluva &amp; Across Kerala</h3>
+                                <h3 class="text-white font-display font-bold text-lg sm:text-xl mt-0.5">Muppathadam, Aluva &amp; Across Kerala</h3>
                             </div>
-                            <a href="https://www.google.com/maps/search/?api=1&query=Muppathadam+Aluva+Ernakulam+Kerala" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-copper-500 hover:bg-copper-400 text-white text-xs font-bold flex items-center gap-2 transition">
+                            <a href="https://www.google.com/maps/search/?api=1&query=Muppathadam+Aluva+Ernakulam+Kerala" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-xl bg-copper-500 hover:bg-copper-400 text-white text-xs font-bold inline-flex items-center justify-center gap-2 transition self-start sm:self-auto">
                                 <i class="fa-solid fa-map-location-dot"></i> Open in Google Maps
                             </a>
                         </div>
@@ -707,8 +738,6 @@
                             <span class="px-3 py-1.5 rounded-lg bg-carbon-900 border border-white/10 text-xs text-gray-200">Perumbavoor</span>
                             <span class="px-3 py-1.5 rounded-lg bg-carbon-900 border border-white/10 text-xs text-gray-200">All Kerala Courier Accepted</span>
                         </div>
-
-                        
                     </div>
                 </div>
 
@@ -717,11 +746,11 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-carbon-950 border-t border-white/10 py-10 text-xs text-gray-500">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div class="flex items-center gap-3">
-                <span class="font-display font-extrabold text-lg text-white">NEW<span class="text-copper-500">SKINS</span></span>
-                <span>•</span>
+    <footer class="bg-carbon-950 border-t border-white/10 py-8 sm:py-10 text-xs text-gray-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+            <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2 sm:gap-3">
+                <span class="font-display font-extrabold text-base sm:text-lg text-white">NEW<span class="text-copper-500">SKINS</span></span>
+                <span class="hidden sm:inline">•</span>
                 <span>Muppathadam, Aluva, Ernakulam District, Kerala</span>
             </div>
             <div>
@@ -730,65 +759,77 @@
         </div>
     </footer>
 
-    <!-- FLOATING WHATSAPP CTA BUTTON (MOBILE & DESKTOP) -->
-    <a href="https://wa.me/919388475951?text=Hi%20Newskins%20(Aluva)%2C%20I%20saw%20your%20website%20portfolio%20and%20want%20to%20enquire%20about%20steering%20wheel%20upholstery." target="_blank" rel="noopener noreferrer" class="fixed bottom-5 right-5 z-40 flex items-center gap-2.5 bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-3.5 rounded-full shadow-2xl shadow-emerald-600/40 border border-emerald-400/40 transition transform hover:scale-105">
+    <!-- MOBILE STICKY BOTTOM ACTION BAR (Phones Only) -->
+    <div class="fixed bottom-0 inset-x-0 z-40 sm:hidden bg-carbon-950/95 backdrop-blur-lg border-t border-white/15 px-3 py-2.5 grid grid-cols-5 gap-2 shadow-2xl">
+        <a href="tel:+919388475951" class="col-span-2 py-3 px-3 rounded-xl bg-carbon-800 border border-white/10 text-white font-display font-bold text-xs flex items-center justify-center gap-2 active:scale-95 transition">
+            <i class="fa-solid fa-phone text-copper-400"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/919388475951?text=Hi%20Newskins%20(Aluva)%2C%20I%20saw%20your%20website%20portfolio%20and%20want%20to%20enquire%20about%20steering%20wheel%20upholstery." target="_blank" rel="noopener noreferrer" class="col-span-3 py-3 px-4 rounded-xl bg-emerald-600 text-white font-display font-bold text-xs flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/30 active:scale-95 transition">
+            <i class="fa-brands fa-whatsapp text-base"></i>
+            <span>Chat on WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- DESKTOP FLOATING WHATSAPP CTA BUTTON (Hidden on small phones to avoid covering cards) -->
+    <a href="https://wa.me/919388475951?text=Hi%20Newskins%20(Aluva)%2C%20I%20saw%20your%20website%20portfolio%20and%20want%20to%20enquire%20about%20steering%20wheel%20upholstery." target="_blank" rel="noopener noreferrer" class="hidden sm:flex fixed bottom-5 right-5 z-40 items-center gap-2.5 bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-3.5 rounded-full shadow-2xl shadow-emerald-600/40 border border-emerald-400/40 transition transform hover:scale-105">
         <i class="fa-brands fa-whatsapp text-2xl"></i>
-        <span class="font-display font-bold text-xs sm:text-sm pr-1">Chat on WhatsApp</span>
+        <span class="font-display font-bold text-sm pr-1">Chat on WhatsApp</span>
     </a>
 
-    <!-- HIGH-RESOLUTION PORTFOLIO LIGHTBOX MODAL -->
-    <div id="lightboxModal" class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-md flex items-center justify-center p-3 sm:p-6">
-        <div class="bg-carbon-900 border border-white/15 rounded-3xl max-w-4xl w-full overflow-hidden shadow-2xl relative flex flex-col md:flex-row max-h-[92vh]">
+    <!-- HIGH-RESOLUTION PORTFOLIO LIGHTBOX MODAL (With Mobile Touch Swipe) -->
+    <div id="lightboxModal" class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-md flex items-center justify-center p-2.5 sm:p-6">
+        <div class="bg-carbon-900 border border-white/15 rounded-2xl sm:rounded-3xl max-w-4xl w-full overflow-hidden shadow-2xl relative flex flex-col md:flex-row max-h-[94vh]">
             
             <!-- Close Button -->
-            <button onclick="closeLightbox()" class="absolute top-3 right-3 z-20 w-10 h-10 rounded-full bg-black/70 hover:bg-copper-500 text-white flex items-center justify-center transition" title="Close">
+            <button onclick="closeLightbox()" aria-label="Close Lightbox" class="absolute top-2.5 right-2.5 sm:top-3 sm:right-3 z-20 w-10 h-10 rounded-full bg-black/75 hover:bg-copper-500 text-white flex items-center justify-center transition">
                 <i class="fa-solid fa-xmark text-lg"></i>
             </button>
 
-            <!-- Image Container with Zoom & Prev/Next -->
-            <div class="md:w-7/12 bg-carbon-950 relative flex items-center justify-center overflow-hidden min-h-[280px] sm:min-h-[400px]">
-                <img id="lightboxImg" src="" alt="" onclick="toggleLightboxZoom(this)" class="lightbox-img max-h-[65vh] md:max-h-[80vh] w-auto object-contain cursor-zoom-in select-none">
+            <!-- Image Container with Zoom, Prev/Next & Touch Swipe -->
+            <div id="lightboxTouchArea" class="md:w-7/12 bg-carbon-950 relative flex items-center justify-center overflow-hidden min-h-[240px] sm:min-h-[380px]">
+                <img id="lightboxImg" src="" alt="" onclick="toggleLightboxZoom(this)" class="lightbox-img max-h-[48vh] sm:max-h-[65vh] md:max-h-[80vh] w-auto object-contain cursor-zoom-in select-none">
                 
                 <!-- Prev / Next Arrows -->
-                <button onclick="navigateLightbox(-1)" class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/60 hover:bg-copper-500 text-white flex items-center justify-center transition">
+                <button onclick="navigateLightbox(-1)" aria-label="Previous Work" class="absolute left-2.5 sm:left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/65 hover:bg-copper-500 active:scale-95 text-white flex items-center justify-center transition">
                     <i class="fa-solid fa-chevron-left"></i>
                 </button>
-                <button onclick="navigateLightbox(1)" class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/60 hover:bg-copper-500 text-white flex items-center justify-center transition">
+                <button onclick="navigateLightbox(1)" aria-label="Next Work" class="absolute right-2.5 sm:right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/65 hover:bg-copper-500 active:scale-95 text-white flex items-center justify-center transition">
                     <i class="fa-solid fa-chevron-right"></i>
                 </button>
-                <div class="absolute bottom-3 left-3 bg-black/65 text-[11px] text-gray-300 px-2.5 py-1 rounded-lg pointer-events-none">
-                    <i class="fa-solid fa-magnifying-glass-plus mr-1 text-copper-400"></i> Click photo to zoom stitch details
+                <div class="absolute bottom-2.5 left-2.5 bg-black/70 text-[10px] sm:text-[11px] text-gray-300 px-2.5 py-1 rounded-lg pointer-events-none">
+                    <i class="fa-solid fa-magnifying-glass-plus mr-1 text-copper-400"></i> Tap photo to zoom • Swipe left/right
                 </div>
             </div>
 
             <!-- Details & Direct WhatsApp Order Column -->
-            <div class="md:w-5/12 p-6 flex flex-col justify-between bg-carbon-900 overflow-y-auto">
-                <div class="space-y-4">
+            <div class="md:w-5/12 p-4 sm:p-6 flex flex-col justify-between bg-carbon-900 overflow-y-auto">
+                <div class="space-y-3 sm:space-y-4">
                     <div class="flex items-center justify-between">
-                        <span id="lightboxCategory" class="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-copper-500/20 text-copper-400 border border-copper-500/30">
+                        <span id="lightboxCategory" class="text-[11px] sm:text-xs font-bold uppercase tracking-wider px-2.5 sm:px-3 py-1 rounded-full bg-copper-500/20 text-copper-400 border border-copper-500/30">
                             Category
                         </span>
                         <span id="lightboxCounter" class="text-xs text-gray-400 font-mono">1 / 29</span>
                     </div>
 
-                    <h3 id="lightboxTitle" class="font-display font-extrabold text-2xl text-white leading-snug">
+                    <h3 id="lightboxTitle" class="font-display font-extrabold text-lg sm:text-2xl text-white leading-snug">
                         Work Title
                     </h3>
 
-                    <p id="lightboxDesc" class="text-gray-300 text-sm leading-relaxed">
+                    <p id="lightboxDesc" class="text-gray-300 text-xs sm:text-sm leading-relaxed">
                         Description of craftsmanship.
                     </p>
 
-                    <div class="bg-carbon-800/90 rounded-2xl p-4 border border-white/10 space-y-2 text-xs text-gray-300">
+                    <div class="bg-carbon-800/90 rounded-2xl p-3 sm:p-4 border border-white/10 space-y-1.5 text-[11px] sm:text-xs text-gray-300">
                         <div class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> <span>Hand-stitched at Newskins, Muppathadam, Aluva</span></div>
                         <div class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> <span>Customisable leather shade &amp; thread colour</span></div>
                         <div class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> <span>Available for individual cars &amp; workshop orders</span></div>
                     </div>
                 </div>
 
-                <div class="pt-6 mt-6 border-t border-white/10 space-y-3">
-                    <a id="lightboxWhatsappBtn" href="#" target="_blank" rel="noopener noreferrer" class="w-full py-3.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-display font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/25 transition">
-                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                <div class="pt-4 mt-4 border-t border-white/10 space-y-2.5">
+                    <a id="lightboxWhatsappBtn" href="#" target="_blank" rel="noopener noreferrer" class="w-full py-3 sm:py-3.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-display font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/25 transition">
+                        <i class="fa-brands fa-whatsapp text-base sm:text-lg"></i>
                         <span>Request Similar Work on WhatsApp</span>
                     </a>
                     <button onclick="closeLightbox()" class="w-full py-2.5 px-4 rounded-xl bg-carbon-800 hover:bg-carbon-700 text-gray-300 text-xs font-semibold transition">
@@ -797,64 +838,6 @@
                 </div>
             </div>
 
-        </div>
-    </div>
-
-    <!-- VERCEL DEPLOYMENT GUIDE MODAL -->
-    <div id="vercelModal" class="fixed inset-0 z-50 hidden bg-black/85 backdrop-blur-md flex items-center justify-center p-4">
-        <div class="bg-carbon-900 border border-white/15 rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl relative max-h-[90vh] overflow-y-auto">
-            <button onclick="closeVercelModal()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-carbon-800 hover:bg-copper-500 text-white flex items-center justify-center transition">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-
-            <div class="flex items-center gap-3 mb-4">
-                <div class="w-10 h-10 rounded-xl bg-white text-black flex items-center justify-center">
-                    <svg class="w-5 h-5" viewBox="0 0 76 65" fill="currentColor"><path d="M37.5274 0L75.0548 65H0L37.5274 0Z"/></svg>
-                </div>
-                <div>
-                    <h3 class="font-display font-extrabold text-xl text-white">How to Host Your "Newskins" Website on Vercel</h3>
-                    <p class="text-xs text-gray-400">100% Free Hosting • Takes less than 2 minutes</p>
-                </div>
-            </div>
-
-            <div class="space-y-4 text-sm text-gray-300">
-                <div class="bg-carbon-800 p-4 rounded-2xl border border-white/10">
-                    <h4 class="font-bold text-white mb-1">Step 1: Put `index.html` and your 29 Photos in One Folder</h4>
-                    <p class="text-xs text-gray-400 leading-relaxed">
-                        Create a folder on your computer or phone named <code class="text-copper-400 bg-black/40 px-1.5 py-0.5 rounded">newskins-website</code>. Save this file as <code class="text-copper-400 bg-black/40 px-1.5 py-0.5 rounded">index.html</code> inside that folder, and place your 29 steering wheel images (`image_704f61.jpg`, etc.) in the exact same folder.
-                    </p>
-                </div>
-
-                <div class="bg-carbon-800 p-4 rounded-2xl border border-white/10">
-                    <h4 class="font-bold text-white mb-1">Step 2: Upload to GitHub &amp; Connect Vercel (Easiest Way)</h4>
-                    <ol class="list-decimal list-inside text-xs text-gray-400 space-y-1.5 mt-1">
-                        <li>Create a free account at <a href="https://github.com" target="_blank" class="text-copper-400 underline">github.com</a> and click <strong>New Repository</strong> (name it <code class="text-gray-200">newskins</code>).</li>
-                        <li>Click <strong>"uploading an existing file"</strong>, drag your <code class="text-gray-200">index.html</code> and the 29 photos into the box, and click <strong>Commit changes</strong>.</li>
-                        <li>Go to <a href="https://vercel.com" target="_blank" class="text-copper-400 underline">vercel.com</a>, sign in with GitHub, click <strong>Add New Project → Import</strong> your <code class="text-gray-200">newskins</code> repository, and click <strong>Deploy</strong>!</li>
-                        <li>Your live link (e.g., <code class="text-emerald-400">newskins.vercel.app</code>) will be ready in 15 seconds to share on WhatsApp, Instagram, and Google Maps.</li>
-                    </ol>
-                </div>
-
-                <!-- Local Photo Preview Tool (If testing locally with renamed files) -->
-                <div class="bg-copper-500/10 border border-copper-500/30 p-4 rounded-2xl">
-                    <h4 class="font-bold text-copper-400 text-xs uppercase tracking-wider mb-1">
-                        <i class="fa-solid fa-folder-open mr-1"></i> Optional: Test Local Gallery Photos Right Now
-                    </h4>
-                    <p class="text-xs text-gray-300 mb-3">
-                        If you downloaded this HTML file to your device and want to preview your gallery photos directly from your device folder right now, select them below:
-                    </p>
-                    <label class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-copper-500 hover:bg-copper-400 text-white text-xs font-bold cursor-pointer transition">
-                        <i class="fa-solid fa-images"></i> Select Photos from Device
-                        <input type="file" multiple accept="image/*" class="hidden" onchange="loadLocalFilesPreview(event)">
-                    </label>
-                </div>
-            </div>
-
-            <div class="mt-6 flex justify-end">
-                <button onclick="closeVercelModal()" class="px-5 py-2.5 rounded-xl bg-white text-black font-bold text-xs hover:bg-gray-200 transition">
-                    Got It, Close Guide
-                </button>
-            </div>
         </div>
     </div>
 
@@ -1139,13 +1122,13 @@
                     : portfolioItems.filter(item => item.category === cat.id || item.tags.includes(cat.id)).length;
                 const isActive = activeCategory === cat.id;
                 return `
-                    <button onclick="setCategory('${cat.id}')" class="shrink-0 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center gap-2 border ${
+                    <button onclick="setCategory('${cat.id}')" class="snap-start shrink-0 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center gap-1.5 sm:gap-2 border ${
                         isActive
                             ? 'bg-copper-500 text-white border-copper-400 shadow-lg shadow-copper-500/25'
                             : 'bg-carbon-800 text-gray-300 border-white/10 hover:border-white/25 hover:text-white'
                     }">
                         <span>${cat.label}</span>
-                        <span class="px-2 py-0.5 rounded-full text-[11px] ${
+                        <span class="px-1.5 sm:px-2 py-0.5 rounded-full text-[10px] sm:text-[11px] ${
                             isActive ? 'bg-black/30 text-white' : 'bg-white/10 text-gray-400'
                         }">${count}</span>
                     </button>
@@ -1202,39 +1185,40 @@
                                 <div class="absolute inset-0 bg-gradient-to-t from-carbon-950/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition"></div>
                                 
                                 <!-- Work Number & Category Badge -->
-                                <div class="absolute top-3 left-3 right-3 flex items-center justify-between">
-                                    <span class="px-2.5 py-1 rounded-lg bg-black/70 backdrop-blur-md text-saddle-300 text-[11px] font-semibold border border-white/10">
+                                <div class="absolute top-2 left-2 right-2 sm:top-3 sm:left-3 sm:right-3 flex items-center justify-between gap-1">
+                                    <span class="px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-md sm:rounded-lg bg-black/75 backdrop-blur-md text-saddle-300 text-[9px] sm:text-[11px] font-semibold border border-white/10 truncate">
                                         ${item.category}
                                     </span>
-                                    <span class="px-2 py-0.5 rounded-md bg-black/60 text-gray-300 text-[10px] font-mono">
+                                    <span class="px-1.5 sm:px-2 py-0.5 rounded-md bg-black/65 text-gray-300 text-[9px] sm:text-[10px] font-mono shrink-0">
                                         #${item.id}
                                     </span>
                                 </div>
 
-                                <!-- Hover Inspect Overlay -->
-                                <div class="absolute bottom-3 right-3 w-9 h-9 rounded-xl bg-black/70 group-hover:bg-copper-500 text-white flex items-center justify-center transition shadow">
-                                    <i class="fa-solid fa-magnifying-glass-plus text-xs"></i>
+                                <!-- Zoom Icon Overlay -->
+                                <div class="absolute bottom-2 right-2 sm:bottom-3 sm:right-3 w-7 h-7 sm:w-9 sm:h-9 rounded-lg sm:rounded-xl bg-black/70 group-hover:bg-copper-500 text-white flex items-center justify-center transition shadow">
+                                    <i class="fa-solid fa-magnifying-glass-plus text-[10px] sm:text-xs"></i>
                                 </div>
                             </div>
 
                             <!-- Card Body -->
-                            <div class="p-4">
-                                <h3 class="font-display font-bold text-base text-white group-hover:text-copper-400 transition cursor-pointer" onclick="openLightbox(${idx})">
+                            <div class="p-2.5 sm:p-4">
+                                <h3 class="font-display font-bold text-xs sm:text-base text-white group-hover:text-copper-400 transition cursor-pointer line-clamp-2 leading-snug" onclick="openLightbox(${idx})">
                                     ${item.title}
                                 </h3>
-                                <p class="text-gray-400 text-xs mt-1.5 leading-relaxed line-clamp-2">
+                                <p class="text-gray-400 text-[11px] sm:text-xs mt-1 sm:mt-1.5 leading-relaxed line-clamp-2 hidden sm:block">
                                     ${item.details}
                                 </p>
                             </div>
                         </div>
 
                         <!-- Card Footer Actions -->
-                        <div class="px-4 pb-4 pt-2 flex items-center gap-2">
-                            <button onclick="openLightbox(${idx})" class="flex-1 py-2 px-3 rounded-xl bg-carbon-700 hover:bg-carbon-600 text-gray-200 text-xs font-semibold transition">
-                                Inspect Stitch
+                        <div class="px-2.5 pb-2.5 sm:px-4 sm:pb-4 pt-1 flex items-center gap-1.5 sm:gap-2">
+                            <button onclick="openLightbox(${idx})" class="flex-1 py-1.5 sm:py-2 px-2 sm:px-3 rounded-lg sm:rounded-xl bg-carbon-700 hover:bg-carbon-600 text-gray-200 text-[11px] sm:text-xs font-semibold transition">
+                                <span class="sm:hidden">Zoom</span>
+                                <span class="hidden sm:inline">Inspect Stitch</span>
                             </button>
-                            <a href="https://wa.me/919388475951?text=${waText}" target="_blank" rel="noopener noreferrer" class="py-2 px-3 rounded-xl bg-emerald-600/20 hover:bg-emerald-600 text-emerald-300 hover:text-white border border-emerald-500/30 text-xs font-semibold flex items-center gap-1.5 transition" title="Enquire about this style on WhatsApp">
-                                <i class="fa-brands fa-whatsapp text-sm"></i>
+                            <a href="https://wa.me/919388475951?text=${waText}" target="_blank" rel="noopener noreferrer" class="py-1.5 sm:py-2 px-2.5 sm:px-3 rounded-lg sm:rounded-xl bg-emerald-600/20 hover:bg-emerald-600 text-emerald-300 hover:text-white border border-emerald-500/30 text-[11px] sm:text-xs font-semibold flex items-center justify-center gap-1 sm:gap-1.5 transition" title="Enquire about this style on WhatsApp">
+                                <i class="fa-brands fa-whatsapp text-xs sm:text-sm"></i>
                                 <span>Enquire</span>
                             </a>
                         </div>
@@ -1294,6 +1278,25 @@
             imgEl.classList.toggle('zoomed');
         }
 
+        // Touch Swipe Support inside Lightbox for Mobile Phones
+        let touchStartX = 0;
+        let touchEndX = 0;
+        const lightboxTouchArea = document.getElementById('lightboxTouchArea');
+
+        lightboxTouchArea.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        lightboxTouchArea.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            const swipeThreshold = 45;
+            if (touchEndX < touchStartX - swipeThreshold) {
+                navigateLightbox(1); // Swipe left -> Next
+            } else if (touchEndX > touchStartX + swipeThreshold) {
+                navigateLightbox(-1); // Swipe right -> Previous
+            }
+        }, { passive: true });
+
         // Interactive Customizer Selection
         function selectOption(stateKey, value, btnEl) {
             quoteState[stateKey] = value;
@@ -1332,38 +1335,16 @@
             window.open(url, '_blank', 'noopener,noreferrer');
         }
 
-        // Mobile Menu & Vercel Modal Controls
+        // Mobile Menu Toggle with Hamburger / Close Icon Switch
         function toggleMobileMenu() {
             const menu = document.getElementById('mobileMenu');
-            menu.classList.toggle('hidden');
-        }
-
-        function openVercelModal() {
-            document.getElementById('vercelModal').classList.remove('hidden');
-        }
-
-        function closeVercelModal() {
-            document.getElementById('vercelModal').classList.add('hidden');
-        }
-
-        // Optional Local File Loader so user can test local gallery files anytime
-        function loadLocalFilesPreview(event) {
-            const files = Array.from(event.target.files || []);
-            if (!files.length) return;
-
-            files.forEach((file, index) => {
-                const objectUrl = URL.createObjectURL(file);
-                // Match by filename first, or assign sequentially
-                const matchedItem = portfolioItems.find(item => item.src.toLowerCase() === file.name.toLowerCase());
-                if (matchedItem) {
-                    matchedItem.src = objectUrl;
-                } else if (portfolioItems[index]) {
-                    portfolioItems[index].src = objectUrl;
-                }
-            });
-
-            filterPortfolio();
-            closeVercelModal();
+            const icon = document.getElementById('mobileMenuIcon');
+            const isHidden = menu.classList.toggle('hidden');
+            if (isHidden) {
+                icon.className = 'fa-solid fa-bars text-lg';
+            } else {
+                icon.className = 'fa-solid fa-xmark text-xl text-copper-400';
+            }
         }
 
         // Keyboard support for Lightbox
